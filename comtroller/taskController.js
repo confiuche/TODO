@@ -1,3 +1,5 @@
+import Post from "../model/taskModel.js"
+
 //displayTask
 
 //addTask
@@ -13,7 +15,7 @@ export const addTaskController = async (req, res) => {
                 message:"User with that email already exit"
               })
         }else{
-            const user = await User.create({
+            const user = await Post.create({
                 content,
                 date,
                 status
