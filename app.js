@@ -3,6 +3,7 @@ import dotenv from "dotenv"
 import taskRoutes from "./routes/taskRoutes.js"
 
 dotenv.config();
+database()
 
 const app = express();
 
