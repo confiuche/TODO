@@ -5,7 +5,6 @@ import Post from "../model/taskModel.js"
 //addTask
 export const addTaskController = async (req, res) => {
     const {content,date,status} = req.body;
-    
     try {
         console.log(req.userAuth);
         const foundUser = await Post.findById({userAuth})
@@ -25,7 +24,6 @@ export const addTaskController = async (req, res) => {
             status:"success",
             data: user
         })
-    }
     } catch (error) {
         res.json(error.message);
     }

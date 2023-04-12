@@ -1,13 +1,12 @@
-import mongoose, {Schema} from "mongoose"
+import mongoose,{ Schema } from "mongoose";
 
-const todoTaskSchema = new mongoose.Schema(
-    {
+const todoTaskSchema = new mongoose.Schema({
     content:{
         type:String,
         required:true
     },
     status:{
-        type:String
+        type:String,
     },
     date:{
         type:Date,
@@ -19,6 +18,6 @@ const todoTaskSchema = new mongoose.Schema(
     toJSON:{virtuals:true}
 }
 );
-const Post = mongoose.model("Post",todoTaskSchema);
+const addTask = mongoose.model("Post",todoTaskSchema);
 
-export default Post;
+export default addTask;
