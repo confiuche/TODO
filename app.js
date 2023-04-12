@@ -4,7 +4,7 @@ import taskRoutes from "./routes/taskRoutes.js"
 import { database } from "./config/dBconnect.js"
 
 dotenv.config();
-database()
+database();
 
 const app = express();
 
