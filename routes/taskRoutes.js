@@ -9,7 +9,7 @@ taskRoutes.get("",displayAllTask)
 //addTask
 taskRoutes.post("/addTask",addTaskController)
 //deleteTask
-taskRoutes.delete("")
+taskRoutes.delete("/:id")
 
 
 export default taskRoutes;
